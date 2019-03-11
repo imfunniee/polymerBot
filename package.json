@@ -1,0 +1,27 @@
+{
+  "name": "polymer",
+  "version": "1.0.0",
+  "description": "a bot",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "author": "imfunny",
+  "license": "ISC",
+  "dependencies": {
+    "discord-anti-spam": "^1.1.2",
+    "discord-rpc": "^3.0.1",
+    "discord.js": "^11.4.2",
+    "discord.js-commando": "^0.10.0",
+    "emojify-text": "^2.0.0",
+    "ffmpeg-binaries": "^4.0.0",
+    "file-system": "^2.2.2",
+    "get-json": "^1.0.1",
+    "got": "^9.6.0",
+    "jquery": "^3.3.1",
+    "opusscript": "0.0.6",
+    "screenshot-promise": "^2.0.0",
+    "webhook-discord": "^2.3.0",
+    "ytdl-core": "^0.25.2"
+  }
+}
