@@ -13,7 +13,7 @@ const client = new Discord.Client();
 // Returns array of category folders
 const categories = fs.readdirSync("./commands");
 
-// Inititates Discord collections see https://discord.js.org/#/docs/main/stable/class/Collection
+// Initiates Discord collections see https://discord.js.org/#/docs/main/stable/class/Collection
 client.commands = new Discord.Collection();
 client.directories = new Discord.Collection();
 client.categories = new Discord.Collection();
