@@ -12,7 +12,7 @@ module.exports.run = (client, message) => {
 
 
 	if (!command) {
-		return message.channel.send(`Unknown command, please do ${prefix}help`);
+		return message.channel.send(`Unknown command, please do ${prefix} help`);
 	};
 
 	command.run(client, message, args);
