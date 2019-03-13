@@ -48,6 +48,6 @@ events.forEach((event) => {
 	client.on(eventName, (...args) => eventProp.run(client, ...args));
 })
 
-watcher(client, process.env.NODE_ENV);
+watcher.init(client, process.env.NODE_ENV);
 
 client.login(process.env.DISCORD_TOKEN);
