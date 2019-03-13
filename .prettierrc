@@ -1,3 +1,4 @@
 {
-	"useTabs": false
+	"useTabs": true,
+	"singleQuote": true
 }

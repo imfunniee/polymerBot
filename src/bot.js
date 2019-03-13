@@ -1,9 +1,11 @@
 const fs = require("fs");
 const dotenv = require("dotenv").config({
-	path: "../.env.example"
+	path: "../.env"
 });
 const path = require("path");
 const slash = require("slash");
+const watcher = require("./util/watcher")
+
 
 const Discord = require("discord.js");
 const client = new Discord.Client();
@@ -18,13 +20,13 @@ categoriesDirectories = categories.map(categoryName =>
 	slash(path.join("./commands", categoryName))
 );
 
-
 categoriesDirectories.forEach(category => {
 	let commands = fs.readdirSync(category);
-	
+
 	let commandsName = commands.map((command) => command.split(".")[0]);
 	let categoryName = category.split("/")[1]
 	client.categories.set(categoryName, commandsName);
+
 
 	commands.forEach((command) => {
 		if (!command.endsWith(".js")) return;
@@ -46,10 +48,6 @@ events.forEach((event) => {
 	client.on(eventName, (...args) => eventProp.run(client, ...args));
 })
 
-client.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.find(ch => ch.name === 'joins');
-  if (!channel) return;
-  channel.send(`Welcome to the server, ${member}`);
-});
+watcher.init(client, process.env.NODE_ENV);
 
 client.login(process.env.DISCORD_TOKEN);
