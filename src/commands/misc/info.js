@@ -3,6 +3,9 @@ module.exports.run = (client, message) => {
 	const Discord = require('discord.js');
 
 	let member = message.mentions.members.first();
+	if (!member) {
+		return message.channel.send('Please mention a member');
+	}
 	let roles = member.roles.filter((role) => role.name !== '@everyone').map((role) => role.name).join(', ') || 'No roles';
 	let joinDate = moment(member.joinedAt).format('MMMM Do YYYY, HH:mm    ');
 	let createDate = moment(member.user.createdAt).format('MMMM Do YYYY, HH:mm    ');

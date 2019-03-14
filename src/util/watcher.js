@@ -5,6 +5,7 @@ const loadEvent = require('./eventInit');
 module.exports.init = (client, ENV) => {
 	if (ENV === 'DEV') {
 		const fileWatcher = chokidar.watch(['commands', 'events'], {
+			// eslint-disable-next-line no-useless-escape
 			ignored: /(^|[\/\\])\../,
 			persistent: true,
 			ignoreInitial: true

@@ -1,4 +1,5 @@
 const fs = require('fs');
+// eslint-disable-next-line no-unused-vars
 const dotenv = require('dotenv').config({
 	path: '../.env'
 });
@@ -16,7 +17,7 @@ client.directories = new Discord.Collection();
 client.categories = new Discord.Collection();
 client.colors = ['#A15CFD', '#FD5C68', '#FD5CB8', '#FDA15C', '#FDF15C', '#78F35A', '#5A78F3'];
 
-categoriesDirectories = categories.map(categoryName =>
+const categoriesDirectories = categories.map(categoryName =>
 	slash(path.join('./commands', categoryName))
 );
 
