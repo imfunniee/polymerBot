@@ -1,6 +1,6 @@
-const chokidar = require("chokidar");
-const loadCommand = require("./commandInit");
-const loadEvent = require("./eventInit");
+const chokidar = require('chokidar');
+const loadCommand = require('./commandInit');
+const loadEvent = require('./eventInit');
 
 module.exports.init = (client, ENV) => {
 	if (ENV === 'DEV') {
@@ -24,4 +24,4 @@ module.exports.init = (client, ENV) => {
 				}
 			});
 	}
-}
+};

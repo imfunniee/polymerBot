@@ -4,7 +4,7 @@
   "description": "a bot",
   "main": "bot.js",
   "scripts": {
-    "start": "node src/bot.js"
+    "start": "cd src && node bot"
   },
   "author": "imfunny",
   "license": "ISC",

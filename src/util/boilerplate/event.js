@@ -1,3 +1,3 @@
 module.exports.run = (client) => {
-	console.log("Do something with this event!");
-}
+	console.log('Do something with this event!');
+};

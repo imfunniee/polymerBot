@@ -1,8 +1,8 @@
 module.exports.run = (client, message) => {
-	message.channel.send("teastss")
-}
+	message.channel.send('teastss');
+};
 
 module.exports.help = {
-	description: "Displays userinfo",
+	description: 'Displays userinfo',
 	usage: `${process.env.PREFIX}info < @mention >`
-}
+};

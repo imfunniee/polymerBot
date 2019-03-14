@@ -9,9 +9,9 @@ module.exports.run = (client, message, args) => {
 			const props = require(`../../${commandPath}`);
 			client.commands.set(commandName, props);
 			message.reply(`The command ${commandName} has been reloaded`);
-		})
+		});
 	} else if (!client.commands.has(args[0])) {
-		return message.channel.send("I cannot find that command");
+		return message.channel.send('I cannot find that command');
 
 	} else {
 
@@ -30,9 +30,9 @@ module.exports.run = (client, message, args) => {
 
 	}
 
-}
+};
 
 module.exports.help = {
-	description: "Reloads commands",
-	usage: "!reload command"
-}
+	description: 'Reloads commands',
+	usage: '!reload command'
+};
